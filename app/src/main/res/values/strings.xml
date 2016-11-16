@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FFmpegInMac</string>
+    <string name="play_video">Play Video</string>
+    <string name="start_transcode">Start Transcode</string>
+    <string name="start_remote_process">Start Remote Process</string>
+    <string name="transcode_remote_process">Transcode Remote Process</string>
+    <string name="transcode_io_thread">Transcode IO Thread</string>
+</resources>
