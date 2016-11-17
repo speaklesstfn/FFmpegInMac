@@ -40,16 +40,28 @@ public class TranscodeActivity extends AppCompatActivity {
 
     private TranscodeService mRemoteService;
     private ITranscodeAidlInterface aidlInterface;
-    private final String basePath = "/storage/emulated/0/mydata/vivo";
-    private final String targetPath = basePath + File.separator + "outout111.mp4";
+    private final String basePath = "/storage/emulated/0";
+    private final String fileName = "video_20161117_123330";
+//        private final String bitps = "ori";
+//    private final String bitps = "1M";
+//        private final String bitps = "0.5M";
+    private final String bitps = "0.6M";
+//    private final String resolution = "ori";
+    private final String resolution = "272x480";
+//    private final String frameRate = "ori";
+    private final String frameRate = "24";
+    private final String originPath = basePath + File.separator
+            + fileName + ".mp4";
+    private final String targetPath = basePath + File.separator
+            + "test" + "_mac_" + bitps + "_" + resolution + "_" + frameRate + ".mp4";
     private final String[] commands = {
             "ffmpeg",
             "-i",
-            basePath + File.separator + "video_20161111_164706.mp4",
-//            basePath + File.separator + "1479263099280.mp4",
-//            "-b", "0.5M",
-//            "-s","720x1080",
-//            "-r", "24",
+            originPath,
+            "-b", bitps,
+            "-s",resolution,
+            "-r", frameRate,
+            "-y",
             targetPath,
     };
 
