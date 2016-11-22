@@ -23,7 +23,6 @@ $FFMPEGDIR/configure \
     --enable-shared \
     --enable-runtime-cpudetect \
     --enable-gpl \
-    --enable-small \
     --enable-cross-compile \
     --disable-debug \
     --disable-static \
