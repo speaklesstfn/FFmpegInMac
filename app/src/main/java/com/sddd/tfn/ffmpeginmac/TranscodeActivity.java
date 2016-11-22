@@ -40,26 +40,24 @@ public class TranscodeActivity extends AppCompatActivity {
 
     private TranscodeService mRemoteService;
     private ITranscodeAidlInterface aidlInterface;
-    private final String basePath = "/storage/emulated/0";
-    private final String fileName = "video_20161117_123330";
-//        private final String bitps = "ori";
+    private final String basePath = "/storage/emulated/0/testdir/";
+    private final String fileName = "01";
+    //        private final String bitps = "ori";
 //    private final String bitps = "1M";
-//        private final String bitps = "0.5M";
-    private final String bitps = "0.6M";
+    private final String bitps = "0.5M";
+    //    private final String bitps = "0.6M";
 //    private final String resolution = "ori";
     private final String resolution = "272x480";
-//    private final String frameRate = "ori";
+    //    private final String frameRate = "ori";
     private final String frameRate = "24";
-    private final String originPath = basePath + File.separator
-            + fileName + ".mp4";
-    private final String targetPath = basePath + File.separator
-            + "test" + "_mac_" + bitps + "_" + resolution + "_" + frameRate + ".mp4";
+    private final String originPath = basePath + fileName + "_in.mp4";
+    private final String targetPath = basePath + fileName + "_out_mac_" + bitps + "_" + resolution + "_" + frameRate + ".mp4";
     private final String[] commands = {
             "ffmpeg",
             "-i",
             originPath,
             "-b", bitps,
-            "-s",resolution,
+            "-s", resolution,
             "-r", frameRate,
             "-y",
             targetPath,

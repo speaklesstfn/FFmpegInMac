@@ -590,5 +590,4 @@ int cuvid_init(AVCodecContext *s);
 int cuvid_transcode_init(OutputStream *ost);
 
 #endif /* FFMPEG_H */
-
 int run(int argc, char **argv);

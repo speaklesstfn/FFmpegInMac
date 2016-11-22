@@ -24,6 +24,7 @@
 
 #include <stdint.h>
 
+#include "config.h"
 #include "libavcodec/avcodec.h"
 #include "libavfilter/avfilter.h"
 #include "libavformat/avformat.h"
@@ -58,7 +59,7 @@ void register_exit(void (*cb)(int ret));
 /**
  * Wraps exit with a program-specific cleanup routine.
  */
-int exit_program(int ret) av_noreturn;
+void exit_program(int ret) av_noreturn;
 
 /**
  * Initialize dynamic library loading
