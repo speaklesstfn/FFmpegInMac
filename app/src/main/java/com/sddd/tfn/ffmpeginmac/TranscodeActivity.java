@@ -41,7 +41,7 @@ public class TranscodeActivity extends AppCompatActivity {
     private TranscodeService mRemoteService;
     private ITranscodeAidlInterface aidlInterface;
     private final String basePath = "/storage/emulated/0/testdir/";
-    private final String fileName = "01";
+    private final String fileName = "05";
     //        private final String bitps = "ori";
 //    private final String bitps = "1M";
     private final String bitps = "0.5M";
@@ -59,6 +59,7 @@ public class TranscodeActivity extends AppCompatActivity {
             "-b", bitps,
             "-s", resolution,
             "-r", frameRate,
+            "-acodec", "copy",
             "-y",
             targetPath,
     };
